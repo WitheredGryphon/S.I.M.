@@ -1,0 +1,39 @@
+html
+{
+    font-family: "Verdana", Verdana, sans-serif;
+}
+
+body
+{
+    background-color: #f1c40f;
+    margin: 0px;
+    padding: 0px;
+}
+
+a
+{
+    margin-right: 16px;
+    color: #000000;
+}
+
+a:hover
+{
+    color: #7f8c8d;
+}
+
+#footer
+{
+    margin-left: 16px;
+    position: fixed;
+    bottom: 0;
+}
+
+#titlebar
+{
+    color: #ecf0f1;
+    font-size: 40px;
+    position: relative;
+    width: auto;
+    height: 96px;
+    background-color: #3498db;
+}
