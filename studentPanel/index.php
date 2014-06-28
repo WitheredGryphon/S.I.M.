@@ -28,6 +28,7 @@ mysqli_close($link);
         </title>
     </head>
     <body>
+    
         <div id = "navbar">
             <ul>
                 <li><a href="#">My Classes</a>
@@ -50,6 +51,24 @@ mysqli_close($link);
             <div id = "logout">
                 <?php echo "Logged in as: " . $_SESSION['user']; ?>
                 <a href="../logout.php"><b>Log Out</b></a>
+            </div>
+        </div>
+        
+        <div id = "backColor">
+            Student Information Management
+        </div>
+        
+        <div class = "container">
+            <div id = "newsHead">
+                <h2>News</h2>
+            </div>
+            <div id = "newsContent">
+                <b><h3>Class A</h3></b>
+                Text<br />
+                <b><h3>Class B</h3></b>
+                Text<br />
+                <b><h3>Class C</h3></b>
+                Text
             </div>
         </div>
     </body>
