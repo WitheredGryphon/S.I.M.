@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <title>
             S.I.M.
         </title>
@@ -21,6 +22,7 @@
 
 <?php
 
+define('INDEX', true);
 include_once("config.php");
 
 if (isset($_POST['submit']))
@@ -64,7 +66,7 @@ if (isset($_POST['submit']))
         }
         else if ($info['AccountType'] == "student")
         {
-            header("Location: studentPanel.php");
+            header("Location: studentPanel/index.php");
         }
     }
 
