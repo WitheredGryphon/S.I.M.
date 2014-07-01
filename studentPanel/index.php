@@ -6,10 +6,12 @@ session_start();
 $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS);
 if(mysqli_connect_errno()) 
 {
-    echo "Failed to connect to MYSQL: " . mysqli_connect_error();
+    echo "Failed to connect to MYSQL: " . mysqli_connect_error() . "<br />
+            <b>Error Code:</b> Beagle";
 }
 
-$db = mysqli_select_db($link, DB_NAME) or die ("Cannot connect to database");
+$db = mysqli_select_db($link, DB_NAME) or die ("Cannot connect to database. <br />
+                                                                        <b>Error Code:</b> Chinook");
 
 if(!isset($_SESSION['user']))
 {

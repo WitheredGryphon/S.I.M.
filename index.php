@@ -28,11 +28,17 @@ include_once("config.php");
 if (isset($_POST['submit']))
 {
     $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS);
+    if(mysqli_connect_errno()) 
+    {
+        echo "Failed to connect to MYSQL: " . mysqli_connect_error() . "<br />
+                <b>Error Code:</b> Beagle";
+    }
     $sql_query = 'CREATE DATABASE IF NOT EXISTS ' . DB_NAME;
     mysqli_query($link, $sql_query);
     $db= new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
-    mysqli_select_db($link, DB_NAME) or die(mysqli_error($db));
+    mysqli_select_db($link, DB_NAME) or die ("Cannot connect to database. <br />
+                                                                    <b>Error Code:</b> Chinook");
     
    $cr_table = "CREATE TABLE IF NOT EXISTS Accounts(
                             PID INT NOT NULL AUTO_INCREMENT,

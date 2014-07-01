@@ -2,8 +2,16 @@ Error Code List
 
 Alligator: The AccountType in the MySQL database is invalid.
 
-Beagle: 
+Beagle: Error connecting to MySQL. Double check your MySQL configuration settings in the config.php file.
             
 Cockroach: Your account does not have sufficient privileges to view the requested webpage. Either
                   elevate your account's privileges or request authorization from the web administrator or
                   IT department.
+                  
+Chinook: Could not find the MySQL database. Confirm the DB_NAME setting in the configuration file is
+              correct. If the issue persists, confirm the database exists in phpMyAdmin and if it doesn't
+              then manually create it.
+              
+Dingo: If you received this error you need to make sure that the table you're trying to pull a list from
+           actually exists. If you don't believe it does, or know it doesn't, add a new entry via the "Add..." tab
+           and it should fix itself.
