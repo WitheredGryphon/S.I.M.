@@ -16,35 +16,32 @@ if(!isset($_SESSION['user']))
     header( "Location: ../redirect.php" );
 }
 
-mysqli_close($link);
+if($_SESSION['atype'] != "admin")
+{
+    header( "Location: ../accessDenied.php" );
+}
 ?>
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="student.css">
+        <link rel="stylesheet" type="text/css" href="admin.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <title>
-            Student Panel
+            Admin Panel
         </title>
     </head>
     <body>
-    
-        <div id = "navbar">
+         <div id = "navbar">
             <ul>
-                <li><a href="#">My Classes</a>
+                <li><a href="#">Class List</a></li>
+                <li><a href="#">Student List</a></li>
+                <li><a href="#">Professor List</a></li>
+                <li><a href="#">Add...</a>
                     <ul>
-                        <li><a href="#">Class A</a></li>
-                        <li><a href="#">Class B</a></li>
-                        <li><a href="#">Class C</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Grades</a></li>
-                <li><a href="#">Attendance</a></li>
-                <li><a href="#">Assignments</a>
-                    <ul>
-                        <li><a href="#">Upcoming</a></li>
-                        <li><a href="#">Ongoing</a></li>
-                        <li><a href="#">Overdue</a></li>
+                        <li><a href="addAdmin.php">Admin</a></li>
+                        <li><a href="addProfessor.php">Professor</a></li>
+                        <li><a href="addStudent.php">Student</a></li>
+                        <li><a href="addClass.php">Class</a></li>
                     </ul>
                </li>
             </ul>
@@ -55,8 +52,7 @@ mysqli_close($link);
         </div>
         
         <div id = "backColor">
-            Student Information Management
+            Admin Panel
         </div>
-
     </body>
 </html>

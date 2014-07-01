@@ -11,7 +11,10 @@
     session_start();
     if(!isset($_SESSION['user']))
     {
-        echo "<b>You must be logged in to access this portion of the page.<br /><br />
-                  To log in, click <a href='index.php'>here.</a></b>";
+        echo "<b>You must be logged in to access this portion of the website.<br /><br />
+                  To log in, click <a href='index.php'>here.</a><br /><br />
+                  You will be automatically redirected in 5 seconds.</b>";
+                  
+        header("refresh:5; url='index.php'");
     }
 ?>

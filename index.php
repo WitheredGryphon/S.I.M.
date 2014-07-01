@@ -60,13 +60,25 @@ if (isset($_POST['submit']))
         $_SESSION['pass'] = $pass;
         
         $info = mysqli_fetch_array($result);
-        if ($info['AccountType'] == "admin")
+        $_SESSION['atype'] = $info['AccountType'];
+        
+        if ($_SESSION['atype'] == "admin")
         {
-            header("Location: instructorPanel.php");
+            header("Location: adminPanel/index.php");
         }
-        else if ($info['AccountType'] == "student")
+        else if ($_SESSION['atype'] == "instructor")
+        {
+            header("Location: instructorPanel/index.php");
+        }
+        else if ($_SESSION['atype'] == "student")
         {
             header("Location: studentPanel/index.php");
+        }
+        else
+        {
+            echo "<p align = 'center'>There was an error logging you in.<br />
+                       Contact your university/school IT department.<br /><br />
+                      <b>Error Code:</b> Alligator</p>";
         }
     }
 

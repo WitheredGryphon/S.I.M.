@@ -1,0 +1,9 @@
+Error Code List
+
+Alligator: The AccountType in the MySQL database is invalid.
+
+Beagle: 
+            
+Cockroach: Your account does not have sufficient privileges to view the requested webpage. Either
+                  elevate your account's privileges or request authorization from the web administrator or
+                  IT department.
